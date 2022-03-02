@@ -1,0 +1,33 @@
+@mixin text-inter ($size, $weight, $line-height) {
+  font: {
+    family: "Inter", "arial", sans-serif;
+    size: $size;
+    weight: $weight;
+    style: normal;
+  }
+  line-height: $line-height;
+}
+
+@mixin netbook {
+  @media screen and (max-width: $netbook) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin mini-tablet {
+  @media screen and (max-width: $mini-tablets) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}

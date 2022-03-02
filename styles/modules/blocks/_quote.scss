@@ -1,0 +1,49 @@
+.quote {
+  padding: 120px 120px 60px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 80px;
+  &__img {
+    max-width: 100%;
+  }
+  &__box {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 470px;
+  }
+  &__text {
+    margin: 0;
+    @include text-inter (34px, 600, 44px);
+    letter-spacing: -0.5px;
+    color: $titleColor;
+  }
+  &__name {
+    @include text-inter (20px, 500, 32px);
+    color: $titleColor;
+    margin: 0 0 6px 0;
+  }
+  &__profession {
+    @include text-inter (16px, 400, 28px);
+    color: $color-text;
+    margin: 0;
+  }
+}
+
+@include netbook {
+  .quote {
+    padding: 80px 40px 30px;
+    grid-template-columns: 430px 1fr;
+    column-gap: 30px;
+    &__text {
+      @include text-inter (25px, 600, 35px);
+    }
+    &__name {
+      @include text-inter (18px, 500, 25px);
+    }
+    &__profession {
+      @include text-inter (14px, 400, 25px);
+    }
+  }
+}

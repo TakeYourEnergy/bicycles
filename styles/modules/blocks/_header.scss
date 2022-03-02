@@ -1,0 +1,116 @@
+.header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  background-color: $backgroundColor;
+  &__wrapper {
+    box-sizing: border-box;
+    max-width: 1440px;
+    padding: 28px 120px;
+  }
+  &__list {
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+  }
+  &__item {
+    list-style-type: none;
+    margin-right: 34px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    @include text-inter (14px, 500, 18px);
+    color: $titleColor;
+    text-decoration: none;
+    transition: opacity 0.5s linear;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  &__burger-open {
+    width: 22px;
+    height: 22px;
+    background-image: url(../images/burger_line_list_menu_nav_navigation_option_icon_123231.svg);
+    border: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  &__burger {
+    display: none;
+    align-items: center;
+    justify-content: end;
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  &__burger-close {
+    width: 22px;
+    height: 22px;
+    background-image: url(../images/button_close.svg);
+    border: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    cursor: pointer;
+    display: none;
+  }
+}
+
+@include netbook {
+  .header__link {
+    @include text-inter (12px, 500, 16px);
+  }
+}
+
+@include tablet {
+  .header__link {
+    @include text-inter (11px, 500, 15px);
+  }
+}
+
+@include mini-tablet {
+  .header__wrapper {
+    padding: 28px 55px;
+  }
+  .header__list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    display: none;
+    &_active {
+      display: flex;
+    }
+  }
+
+  .header__burger {
+    display: flex;
+  }
+
+  .header__item {
+    margin: 0 0 32px 0;
+    &:last-child {
+      margin-bottom: 318px;
+    }
+  }
+  .header__link {
+    @include text-inter (18px, 500, 18px);
+  }
+}
+
+@include mobile {
+  .header__wrapper {
+    padding: 28px 0;
+  }
+}
