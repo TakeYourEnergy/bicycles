@@ -28,6 +28,11 @@
     @include text-inter (16px, 400, 28px);
     color: $color-text;
     margin: 0;
+    opacity: 0.7;
+  }
+  &__line {
+    border-bottom: 1px solid #E3E3E3;
+    display: none;
   }
 }
 
@@ -45,5 +50,42 @@
     &__profession {
       @include text-inter (14px, 400, 25px);
     }
+  }
+}
+
+@include tablet {
+  .quote {
+    grid-template-columns: 100%;
+    gap: 40px;
+    padding: 20px 18px 40px;
+    &__text {
+      margin-bottom: 40px;
+    }
+    &__img {
+      justify-self: center;
+    }
+  }
+}
+
+@include mobile {
+  .quote {
+    padding: 20px 18px 0 40px;
+  }
+  .quote__img {
+    width: 284px;
+    height: 204px;
+  }
+  .quote__text {
+    @include text-inter (23px, 600, 29px);
+  }
+  .quote__name {
+    @include text-inter (14px, 600, 22px);
+  }
+  .quote__profession {
+    @include text-inter (10px, 600, 16px);
+  }
+  .quote__line {
+    display: block;
+    margin-top: 40px;
   }
 }

@@ -45,8 +45,7 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -190,9 +189,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -200,9 +199,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -211,9 +210,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -231,8 +230,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -264,10 +262,9 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -276,8 +273,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -285,7 +282,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -295,7 +292,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -356,37 +353,25 @@ template {
   width: 100%;
   background-color: #F4F4F4;
 }
-
 .header__wrapper {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   max-width: 1440px;
   padding: 28px 120px;
 }
-
 .header__list {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-end;
+  align-items: center;
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .header__item {
   list-style-type: none;
   margin-right: 34px;
 }
-
 .header__item:last-child {
   margin-right: 0;
 }
-
 .header__link {
   font-family: "Inter", "arial", sans-serif;
   font-size: 14px;
@@ -395,14 +380,11 @@ template {
   line-height: 18px;
   color: #151515;
   text-decoration: none;
-  -webkit-transition: opacity 0.5s linear;
   transition: opacity 0.5s linear;
 }
-
 .header__link:hover {
   opacity: 0.75;
 }
-
 .header__burger-open {
   width: 22px;
   height: 22px;
@@ -414,19 +396,13 @@ template {
   background-position: center;
   cursor: pointer;
 }
-
 .header__burger {
   display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  align-items: center;
+  justify-content: end;
   padding-right: 18px;
   padding-left: 18px;
 }
-
 .header__burger-close {
   width: 22px;
   height: 22px;
@@ -449,7 +425,6 @@ template {
     line-height: 16px;
   }
 }
-
 @media screen and (max-width: 768px) {
   .header__link {
     font-family: "Inter", "arial", sans-serif;
@@ -459,41 +434,33 @@ template {
     line-height: 15px;
   }
 }
-
 @media screen and (max-width: 600px) {
   .header__wrapper {
     padding: 28px 55px;
   }
+
   .header__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 100px;
     display: none;
   }
   .header__list_active {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
+
   .header__burger {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
+
   .header__item {
     margin: 0 0 32px 0;
   }
   .header__item:last-child {
     margin-bottom: 318px;
   }
+
   .header__link {
     font-family: "Inter", "arial", sans-serif;
     font-size: 18px;
@@ -502,26 +469,20 @@ template {
     line-height: 18px;
   }
 }
-
 @media screen and (max-width: 320px) {
   .header__wrapper {
     padding: 28px 0;
   }
 }
-
 .description {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 460px 1fr;
-      grid-template-columns: 460px 1fr;
-  -ms-grid-rows: auto auto auto 1fr;
-      grid-template-rows: auto auto auto 1fr;
+  grid-template-columns: 460px 1fr;
+  grid-template-rows: auto auto auto 1fr;
   gap: 50px;
-      grid-template-areas: "title right" "text right" "button right" "symbol right";
+  grid-template-areas: "title right" "text right" "button right" "symbol right";
   padding-left: 120px;
   margin-top: 75px;
 }
-
 .description__title {
   font-family: "Inter", "arial", sans-serif;
   font-size: 55px;
@@ -530,13 +491,10 @@ template {
   line-height: 60px;
   color: #151515;
   margin: 0;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: title;
   margin-top: 80px;
   letter-spacing: -0.5px;
 }
-
 .description__text {
   font-family: "Inter", "arial", sans-serif;
   font-size: 18px;
@@ -545,12 +503,9 @@ template {
   line-height: 28px;
   color: #222222;
   margin: 0;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: text;
   opacity: 0.7;
 }
-
 .description__button {
   padding: 16px 10px;
   font-family: "Inter", "arial", sans-serif;
@@ -565,20 +520,12 @@ template {
   letter-spacing: 1px;
   border-radius: 4px;
   width: 180px;
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: button;
 }
-
 .description__symbol {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
   grid-area: symbol;
 }
-
 .description__symbol-text {
   font-family: "Inter", "arial", sans-serif;
   font-size: 18px;
@@ -588,57 +535,37 @@ template {
   color: #151515;
   margin: 117px 30px 0 0;
 }
-
 .description__line {
   border-bottom: 2px solid #D7D4D4;
   width: 132px;
   color: #D7D4D4;
   margin-top: 125px;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
-
 .description__right {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 2;
   grid-area: right;
-  display: -ms-grid;
   display: grid;
   margin-top: 20px;
 }
-
 .description__right-wrapper {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
   grid-row: 1/2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
   grid-column: 1/2;
   z-index: 1;
   padding: 200px 0 79px;
   margin: 0;
 }
-
 .description__right-img {
   width: 100%;
   max-width: 610px;
   max-height: 836px;
   -o-object-fit: cover;
      object-fit: cover;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
   grid-row: 1/2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
   grid-column: 1/2;
-  -ms-grid-column-align: end;
-      justify-self: end;
+  justify-self: end;
 }
-
 .description__right-wrapper-img {
-  -webkit-box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
-          box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+  box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
   border-radius: 20px;
   background-color: #F4F4F4;
   position: -webkit-sticky;
@@ -648,8 +575,7 @@ template {
 
 @media screen and (max-width: 1024px) {
   .description {
-    -ms-grid-columns: 260px 1fr;
-        grid-template-columns: 260px 1fr;
+    grid-template-columns: 260px 1fr;
     gap: 20px;
     padding-left: 20px;
     padding-right: 20px;
@@ -693,42 +619,47 @@ template {
     margin: 100px 10px 0 0;
   }
 }
-
 @media screen and (max-width: 1024px) and (max-width: 768px) {
   .description {
-        grid-template-areas: "title" "right" "text" "button";
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
+    grid-template-areas: "title" "right" "text" "button";
+    grid-template-columns: 100%;
   }
+
   .description__symbol {
     grid-area: unset;
   }
+
   .description__button {
     width: 100%;
   }
+
   .description__right-img {
     min-width: 250px;
   }
+
   .description__right-wrapper-img {
     width: 200px;
     height: 150px;
   }
+
   .description__right-wrapper {
     padding: 170px 0 35px;
   }
+
   .description__symbol-text {
     display: none;
   }
+
   .description__line {
     width: 100%;
     margin-top: 50px;
   }
 }
-
 @media screen and (max-width: 1024px) and (max-width: 320px) {
   .description {
     gap: 40px;
   }
+
   .description__title {
     font-family: "Inter", "arial", sans-serif;
     font-size: 32px;
@@ -737,17 +668,21 @@ template {
     line-height: 40px;
     margin-top: 40px;
   }
+
   .description__right {
     margin-top: 0;
   }
+
   .description__right-img {
     width: 254px;
     height: 348px;
   }
+
   .description__right-wrapper-img {
     width: 181px;
     height: 139px;
   }
+
   .description__text {
     font-family: "Inter", "arial", sans-serif;
     font-size: 12px;
@@ -755,6 +690,7 @@ template {
     font-style: normal;
     line-height: 18px;
   }
+
   .description__button {
     font-family: "Inter", "arial", sans-serif;
     font-size: 13px;
@@ -763,23 +699,19 @@ template {
     line-height: 19px;
     padding: 14px 62px 13px;
   }
+
   .description__line {
     margin-top: 40px;
+    border-bottom: 1px solid #E3E3E3;
   }
 }
-
 .theme {
   display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding-left: 92px;
   padding-right: 92px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .theme__sun {
   width: 28px;
   height: 28px;
@@ -788,7 +720,6 @@ template {
   background-size: cover;
   background-position: center;
 }
-
 .theme__moon {
   width: 20px;
   height: 20px;
@@ -797,7 +728,6 @@ template {
   background-size: cover;
   background-position: center;
 }
-
 .theme__switch {
   display: inline-block;
   width: 44px;
@@ -810,10 +740,8 @@ template {
   border: none;
   cursor: pointer;
   position: relative;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  transition-duration: 300ms;
 }
-
 .theme__switch::after {
   content: "";
   height: 20px;
@@ -822,45 +750,31 @@ template {
   background: #24B47E;
   top: 3px;
   left: 3px;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  transition-duration: 300ms;
   position: absolute;
   z-index: 1;
 }
-
 .theme__switch_on::after {
   left: 21px;
 }
 
 .quote {
   padding: 120px 120px 60px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[2];
-      grid-template-columns: repeat(2, auto);
-  -webkit-column-gap: 80px;
-          column-gap: 80px;
+  grid-template-columns: repeat(2, auto);
+  -moz-column-gap: 80px;
+       column-gap: 80px;
 }
-
 .quote__img {
   max-width: 100%;
 }
-
 .quote__box {
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 470px;
 }
-
 .quote__text {
   margin: 0;
   font-family: "Inter", "arial", sans-serif;
@@ -871,7 +785,6 @@ template {
   letter-spacing: -0.5px;
   color: #151515;
 }
-
 .quote__name {
   font-family: "Inter", "arial", sans-serif;
   font-size: 20px;
@@ -881,7 +794,6 @@ template {
   color: #151515;
   margin: 0 0 6px 0;
 }
-
 .quote__profession {
   font-family: "Inter", "arial", sans-serif;
   font-size: 16px;
@@ -890,15 +802,19 @@ template {
   line-height: 28px;
   color: #222222;
   margin: 0;
+  opacity: 0.7;
+}
+.quote__line {
+  border-bottom: 1px solid #E3E3E3;
+  display: none;
 }
 
 @media screen and (max-width: 1024px) {
   .quote {
     padding: 80px 40px 30px;
-    -ms-grid-columns: 430px 1fr;
-        grid-template-columns: 430px 1fr;
-    -webkit-column-gap: 30px;
-            column-gap: 30px;
+    grid-template-columns: 430px 1fr;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
   }
   .quote__text {
     font-family: "Inter", "arial", sans-serif;
@@ -920,5 +836,57 @@ template {
     font-weight: 400;
     font-style: normal;
     line-height: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .quote {
+    grid-template-columns: 100%;
+    gap: 40px;
+    padding: 20px 18px 40px;
+  }
+  .quote__text {
+    margin-bottom: 40px;
+  }
+  .quote__img {
+    justify-self: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .quote {
+    padding: 20px 18px 0 40px;
+  }
+
+  .quote__img {
+    width: 284px;
+    height: 204px;
+  }
+
+  .quote__text {
+    font-family: "Inter", "arial", sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 29px;
+  }
+
+  .quote__name {
+    font-family: "Inter", "arial", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 22px;
+  }
+
+  .quote__profession {
+    font-family: "Inter", "arial", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 16px;
+  }
+
+  .quote__line {
+    display: block;
+    margin-top: 40px;
   }
 }
