@@ -4,7 +4,7 @@
   grid-template-columns: repeat(2, auto);
   column-gap: 80px;
   &__img {
-    max-width: 100%;
+    width: 100%;
   }
   &__box {
     margin: 0;
@@ -69,7 +69,7 @@
 
 @include mobile {
   .quote {
-    padding: 20px 18px 0 40px;
+    padding: 20px 18px 0 18px;
   }
   .quote__img {
     width: 284px;

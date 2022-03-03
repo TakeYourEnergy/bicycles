@@ -49,7 +49,6 @@ function sliderLeft() {
 }
 
 
-
 toggleBtn.addEventListener('click', () => {
   toggleButton(toggleBtn)
 })

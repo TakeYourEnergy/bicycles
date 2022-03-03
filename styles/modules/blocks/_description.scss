@@ -83,11 +83,7 @@
     padding-left: 20px;
     padding-right: 20px;
     &__title {
-      @include text-inter (40px, 700, 50px);
       margin-top: 20px;
-    }
-    &__text {
-      @include text-inter (15px, 400, 23px);
     }
     &__right-img {
       min-width: 400px;
@@ -148,7 +144,6 @@
       gap: 40px;
     }
     .description__title {
-      @include text-inter (32px, 700, 40px);
       margin-top: 40px;
     }
     .description__right {
@@ -161,9 +156,6 @@
     .description__right-wrapper-img {
       width: 181px;
       height: 139px;
-    }
-    .description__text {
-      @include text-inter (12px, 400, 18px);
     }
     .description__button {
       @include text-inter (13px, 600, 19px);

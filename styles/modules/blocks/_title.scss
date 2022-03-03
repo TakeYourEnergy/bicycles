@@ -3,3 +3,13 @@
   color: $titleColor;
   letter-spacing: -0.5px
 }
+@include netbook {
+  .title {
+    @include text-inter (40px, 700, 50px);
+  }
+}
+@include mobile {
+  .title {
+    @include text-inter (32px, 700, 40px);
+  }
+}

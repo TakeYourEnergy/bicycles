@@ -9,8 +9,9 @@
   }
   &__slider-item {
     display: none;
+    flex-direction: column;
     &_active {
-      display: block;
+      display: flex;
     }
   }
   &__images {
@@ -20,7 +21,7 @@
     margin-bottom: 50px;
   }
   &__images-img {
-    max-width: 100%;
+    width: 100%;
     height: 100%;
   }
   &__images-highaway {
@@ -95,5 +96,71 @@
     position: absolute;
     top: 17px;
     left: 21px;
+  }
+}
+
+@include netbook {
+  .types {
+    padding: 80px 40px 30px;
+  }
+  .types__images {
+    gap: 30px;
+  }
+}
+@include tablet {
+  .types {
+    padding: 0 18px 40px;
+  }
+  .types__images {
+    grid-template-columns: 100%;
+    margin-bottom: 40px;
+  }
+  .types__images-img_disable {
+    display: none;
+  }
+  .types__title {
+    margin: 0 0 40px 0;
+  }
+  .types__text {
+    order: 3;
+    margin: 0;
+  }
+  .types__images-img {
+    order: 2;
+  }
+  .types__slider-buttons {
+    position: absolute;
+    top: 13px;
+    right: 0;
+  }
+  .types__slider {
+    position: relative;
+  }
+  .types__slider-buttons-left {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+  }
+  .types__slider-buttons-right {
+    width: 24px;
+    height: 24px;
+  }
+  .types__arrows-left {
+    width: 5px;
+    height: 10px;
+    top: 7px;
+    left: 10px;
+  }
+  .types__arrows-right {
+    width: 5px;
+    height: 10px;
+    top: 7px;
+    left: 10px;
+  }
+}
+
+@include mobile {
+  .types {
+    padding: 40px 18px 40px 18px;
   }
 }
