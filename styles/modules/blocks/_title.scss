@@ -1,0 +1,5 @@
+.title {
+  @include text-inter (55px, 700, 60px);
+  color: $titleColor;
+  letter-spacing: -0.5px
+}
