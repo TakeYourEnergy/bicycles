@@ -8,6 +8,9 @@ const arrowRight = document.querySelector('.types__slider-buttons-right')
 const itemSlider = document.querySelectorAll('.types__slider-item')
 let index = 0
 
+const navigationItem = document.querySelectorAll('.tabs__navigation-item')
+const contentItem = document.querySelectorAll('.tabs__content-item')
+
 function toggleBurger() {
   headerList.classList.toggle('header__list_active')
   if (headerList.classList.contains('header__list_active')) {
@@ -55,5 +58,22 @@ toggleBtn.addEventListener('click', () => {
 headerBurgerOpenBtn.addEventListener('click', toggleBurger)
 arrowRight.addEventListener('click', sliderRight)
 arrowLeft.addEventListener('click', sliderLeft)
+
+for (let i = 0; i < navigationItem.length; i++) {
+  navigationItem[i].addEventListener('click', (e) => {
+    e.preventDefault
+    let attrNav = e.target.getAttribute('data-itemtab')
+    for (let j = 0; j < contentItem.length; j++) {
+      let attrCont = contentItem[j].getAttribute('data-infotab')
+      if (attrNav === attrCont) {
+        contentItem[j].classList.add('tabs__content-item_active')
+        navigationItem[j].classList.add('tabs__navigation-item_active')
+      } else {
+        contentItem[j].classList.remove('tabs__content-item_active')
+        navigationItem[j].classList.remove('tabs__navigation-item_active')
+      }
+    }
+  })
+}
 
 
