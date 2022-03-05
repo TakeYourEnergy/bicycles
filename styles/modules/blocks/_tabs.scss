@@ -7,6 +7,9 @@
     display: flex;
     justify-content: space-between;
   }
+  &__box-slider {
+    display: none;
+  }
   &__navigation-item {
     @include text-inter (18px, 400, 28px);
     color: $color-text;
@@ -36,6 +39,7 @@
   &__img {
     width: 100%;
     margin-bottom: 42px;
+    box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
     border-radius: 20px;
   }
   &__link {
@@ -49,10 +53,115 @@
       color: red;
     }
   }
+  &__select {
+    display: none;
+  }
 }
 
 @include netbook {
   .tabs {
     padding: 80px 40px 30px;
+  }
+}
+
+@include tablet {
+  .tabs {
+    padding: 0 18px 40px;
+    &__navigation {
+      display: none;
+    }
+    &__title {
+      margin: 0 0 40px 0;
+    }
+    &__select {
+      display: block;
+      width: 114px;
+      height: 30px;
+      margin: 0 0 35px 0;
+    }
+    &__contentbox {
+      display: none;
+    }
+    &__content-item {
+      grid-template-columns: 100%;
+    }
+    &__box-slider {
+      display: flex;
+      flex-direction: column;
+    }
+    &__box-slider-item {
+      display: none;
+      &_active {
+        display: block;
+      }
+    }
+    &__highway-slider {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &_active {
+        display: flex;
+      }
+    }
+    &__tt-slider {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &_active {
+        display: flex;
+      }
+    }
+    &__gravel-slider {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &_active {
+        display: flex;
+      }
+    }
+    &__img {
+      margin-bottom: 3px;
+    }
+    &__link-point {
+      margin-top: 20px;
+      display: inline-block;
+      background-color: #939999;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.5s ease;
+      &:hover {
+        background-color: $titleColor;
+      }
+    }
+    &__link-points {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__link-point {
+      margin-right: 5px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .tabs__img {
+    width: 254px;
+    height: 254px;
+  }
+  .tabs__link {
+    @include text-inter (14px, 600, 18px);
+  }
+  .tabs__link-point {
+    width: 4px;
+    height: 4px;
   }
 }
