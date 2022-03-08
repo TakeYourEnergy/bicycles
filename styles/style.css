@@ -1260,9 +1260,6 @@ template {
     cursor: pointer;
     transition: background-color 0.5s ease;
   }
-  .tabs__link-point:hover {
-    background-color: #151515;
-  }
   .tabs__link-points {
     display: flex;
     justify-content: center;
@@ -1273,6 +1270,9 @@ template {
   }
   .tabs__link-point:last-child {
     margin-right: 0;
+  }
+  .tabs__link-point_active {
+    background-color: #151515;
   }
 }
 @media screen and (max-width: 320px) {

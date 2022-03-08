@@ -79,6 +79,17 @@ linkPointHighway.forEach(item => {
 })
 
 
+const tabsLinkPoint = document.querySelectorAll('.tabs__link-point')
+tabsLinkPoint.forEach(item => {
+  item.addEventListener('click', (e) => {
+    for (j = 0; j < tabsLinkPoint.length; j++) {
+      tabsLinkPoint[j].classList.remove('tabs__link-point_active')
+    }
+    e.target.classList.add('tabs__link-point_active')
+  })
+})
+
+
 function toggleBurger() {
   headerList.classList.toggle('header__list_active')
   if (headerList.classList.contains('header__list_active')) {
@@ -118,6 +129,9 @@ function sliderLeft() {
     itemSlider[0].classList.remove('types__slider-item_active')
   }
 }
+
+
+
 
 toggleBtn.addEventListener('click', () => {
   toggleButton(toggleBtn)
