@@ -1,0 +1,89 @@
+.footer {
+  padding: 80px 122px 60px 120px;
+  background-color: $footer-color;
+  &__title {
+    @include text-inter(24px, 600, 32px);
+    color: $titleColor;
+    margin: 0 0 50px 0;
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 11px 9px 20px;
+    max-width: 360px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #C7C7C7;
+    margin-bottom: 100px;
+  }
+  &__input {
+    border: none;
+    background-color: $footer-color;
+    outline: none;
+    @include text-inter(13px, 500, 28px);
+    color: $titleColor;
+  }
+  &__button {
+    border: none;
+    display: none;
+    @include text-inter(13px, 500, 28px);
+    padding: 0;
+    &_active {
+      display: block;
+    }
+  }
+  &__change {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__theme {
+    display: flex;
+    justify-content: left;
+    padding: 0;
+  }
+  &__text {
+    margin: 0;
+    @include text-inter(14px, 600, 20px);
+    color: #CFCFCF;
+  }
+  &__sun {
+    margin-right: 24px;
+  }
+  &__switch {
+    margin-right: 22px;
+  }
+}
+
+@include netbook {
+  .footer {
+    padding: 80px 40px 30px;
+  }
+}
+
+@include tablet {
+  .footer {
+    padding: 0 18px 40px;
+    &__title {
+      margin: 0 0 40px 0;
+    }
+    &__form {
+      margin: 0 0 99px 0;
+    }
+    &__change {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__text {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@include mini-tablet  {
+  .footer__theme{
+    display: none;
+  }
+}
+

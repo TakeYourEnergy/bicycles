@@ -1,6 +1,6 @@
 const headerBurgerOpenBtn = document.querySelector('.header__burger-open')
 const headerList = document.querySelector('.header__list')
-const toggleBtn = document.querySelector('.theme__switch')
+const toggleBtn = document.querySelectorAll('.theme__switch')
 const theme = document.querySelector('.theme')
 
 const arrowLeft = document.querySelector('.types__slider-buttons-left')
@@ -10,7 +10,6 @@ let index = 0
 
 const navigationItem = document.querySelectorAll('.tabs__navigation-item')
 const contentItem = document.querySelectorAll('.tabs__content-item')
-
 
 const select = document.querySelector('.tabs__select')
 const option = document.querySelectorAll('.tabs__option')
@@ -23,7 +22,6 @@ select.addEventListener('change', () => {
   select.value === "gravel" ? slGravel.classList.add('tabs__box-slider-item_active') : slGravel.classList.remove('tabs__box-slider-item_active')
   select.value === "tt" ? slTt.classList.add('tabs__box-slider-item_active') : slTt.classList.remove('tabs__box-slider-item_active')
 })
-
 
 const linkPointGravel = document.querySelectorAll('.tabs__link-point-gravel')
 const tabsGravelSlider = document.querySelectorAll('.tabs__gravel-slider')
@@ -59,7 +57,6 @@ linkPointTt.forEach(item => {
     }
   })
 })
-
 
 const linkPointHighway = document.querySelectorAll('.tabs__link-point-highway')
 const tabsBoxSlider = document.querySelectorAll('.tabs__highway-slider')
@@ -101,10 +98,6 @@ function toggleBurger() {
   }
 }
 
-function toggleButton(item) {
-  item.classList.toggle('theme__switch_on')
-}
-
 function sliderRight() {
   index++
   if (index < itemSlider.length) {
@@ -130,11 +123,16 @@ function sliderLeft() {
   }
 }
 
+function toggleButton(item) {
+  for (let i = 0; i < item.length; i++) {
+    item[i].classList.toggle('theme__switch_on')
+  }
+}
 
-
-
-toggleBtn.addEventListener('click', () => {
-  toggleButton(toggleBtn)
+toggleBtn.forEach(item => {
+  item.addEventListener('click', () => {
+    toggleButton(toggleBtn)
+  })
 })
 headerBurgerOpenBtn.addEventListener('click', toggleBurger)
 arrowRight.addEventListener('click', sliderRight)
