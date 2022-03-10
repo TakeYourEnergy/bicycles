@@ -1687,6 +1687,7 @@ template {
 
 .footer__button_active {
   display: block;
+  cursor: pointer;
 }
 
 .footer__change {

@@ -42,7 +42,6 @@ linkPointGravel.forEach(item => {
 
 const linkPointTt = document.querySelectorAll('.tabs__link-point-tt')
 const tabsTtSlider = document.querySelectorAll('.tabs__tt-slider')
-console.log(tabsTtSlider);
 linkPointTt.forEach(item => {
   item.addEventListener('click', (e) => {
     e.preventDefault()
@@ -123,6 +122,22 @@ function sliderLeft() {
   }
 }
 
+
+const footerInput = document.querySelector('.footer__input')
+const footerForm = document.querySelector('.footer__form')
+const footerButton = document.querySelector('.footer__button')
+
+
+footerInput.addEventListener('focus', () => {
+  footerButton.classList.add('footer__button_active')
+})
+
+footerInput.addEventListener('blur', () => {
+  if (!footerInput.value) {
+    footerButton.classList.remove('footer__button_active')
+  }
+})
+
 function toggleButton(item) {
   for (let i = 0; i < item.length; i++) {
     item[i].classList.toggle('theme__switch_on')
@@ -154,5 +169,6 @@ for (let i = 0; i < navigationItem.length; i++) {
     }
   })
 }
+
 
 
