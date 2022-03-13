@@ -138,6 +138,14 @@ footerInput.addEventListener('blur', () => {
   }
 })
 
+footerForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  if (footerInput.value) {
+    footerInput.remove()
+    footerButton.innerHTML = "Круто!"
+  }
+})
+
 function toggleButton(item) {
   for (let i = 0; i < item.length; i++) {
     item[i].classList.toggle('theme__switch_on')
